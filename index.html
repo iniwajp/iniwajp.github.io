@@ -1,0 +1,34 @@
+---
+layout: null
+title: ホーム
+---
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }} | {{ site.title }}</title>
+  <link rel="stylesheet" href="{{ '/assets/css/top.css' | relative_url }}">
+</head>
+<body>
+  <h1>完全オリジナルのトップページ</h1>
+  <p><a href="{{ '/blog/' | relative_url }}">ブログへ移動</a></p>
+
+  <!-- 最新記事のループ（Liquid記法）はそのまま使えます -->
+  <ul>
+    {% for post in site.posts limit:3 %}
+      <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
+  <footer>
+  {% if site.github_username %}
+    <a href="https://github.com/{{ site.github_username }}">GitHub</a>
+  {% endif %}
+
+  {% if site.twitter_username %}
+    <a href="https://x.com/{{ site.twitter_username }}">X (Twitter)</a>
+  {% endif %}
+    <p>&copy; イニワ</p>
+  </footer>
+</body>
+</html>
