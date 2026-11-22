@@ -17,7 +17,7 @@ title: ホーム
         <link href="https://fonts.googleapis.com/css?family=Reem+Kufi|Roboto:300" rel="stylesheet">
         <link href="https://use.fontawesome.com/releases/v6.4.2/css/all.css" rel="stylesheet">
         <link rel="stylesheet" href="{{ '/assets/css/reset.css' | relative_url }}">
-        <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
+        <link rel="stylesheet" href="{{ '/assets/css/top.css' | relative_url }}">
         <link rel="stylesheet" href="{{ '/assets/css/themes/cannary-yellow.css' | relative_url }}">
     </head>
 
@@ -27,10 +27,10 @@ title: ホーム
           <div class="intro">iniwa.jp</div>
           <div class="tagline">web制作&ensp;|&ensp;アプリ開発</div>
             <div class="icons-social">
-              <a href="{{ '/blog/' | relative_url }}">
+<!--              <a href="{{ '/blog/' | relative_url }}">
                 <i class="fas fa-rss" aria-hidden="true" title="Blog"></i>
                 <span class="sr-only">Blog</span>
-              </a>
+              </a> -->
               <a href="https://x.com/iniwajp" rel="me">
                 <i class="fab fa-x-twitter" aria-hidden="true" title="X"></i>
                 <span class="sr-only">X</span>
@@ -52,30 +52,14 @@ title: ホーム
                 <span class="sr-only">LINE</span>
               </a> -->
             </div>
-        </main>
-
-    </body>
-</html>
-  <link rel="stylesheet" href="{{ '/assets/css/top.css' | relative_url }}">
-</head>
-<body>
-  <p><a href="{{ '/blog/' | relative_url }}">Blog</a></p>
-
-  <!-- 最新記事のループ（Liquid記法）はそのまま使えます
-  <ul>
+  <!-- <ul>
     {% for post in site.posts limit:3 %}
       <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
     {% endfor %}
   </ul> -->
-  <footer>
-<!--  {% if site.github_username %}
-    <a href="https://github.com/{{ site.github_username }}">GitHub</a>
-  {% endif %}
-
-  {% if site.twitter_username %}
-    <a href="https://x.com/{{ site.twitter_username }}">X (Twitter)</a>
-  {% endif %} -->
+        </main>
+<!--  <footer>
     <p>&copy; イニワ</p>
-  </footer>
+  </footer> -->
 </body>
 </html>

@@ -1,10 +1,18 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
-  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user=scalable=no">
+        <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+        <link rel="apple-touch-icon" href="{{ '/assets/images/apple-touch-icon.png' | relative_url }}">
+        <link rel="icon" type="image/png" href="{{ '/assets/images/android-touch-icon.png' | relative_url }}">
+        <link rel="icon" href="{{ '/assets/images/favicon.png' type="image/png" | relative_url }}">
+        <link rel="icon" href="{{ '/assets/images/favicon.svg' type="image/svg+xml" | relative_url }}">
+        <link href="https://fonts.googleapis.com/css?family=Reem+Kufi|Roboto:300" rel="stylesheet">
+        <link href="https://use.fontawesome.com/releases/v6.4.2/css/all.css" rel="stylesheet">
+        <link rel="stylesheet" href="{{ '/assets/css/reset.css' | relative_url }}">
+        <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+        <link rel="stylesheet" href="{{ '/assets/css/themes/cannary-yellow.css' | relative_url }}">
   {% feed_meta %}
 </head>
 <body>
@@ -14,15 +22,25 @@
   <main>
     {{ content }}
   </main>
+
   <footer>
+<div class="icons-social">
   {% if site.github_username %}
-    <a href="https://github.com/{{ site.github_username }}">GitHub</a>
+    <a href="https://github.com/{{ site.github_username }}" rel="me">
+      <i class="fab fa-github" aria-hidden="true" title="Github"></i>
+      <span class="sr-only">Github</span>
+    </a>
   {% endif %}
 
   {% if site.twitter_username %}
-    <a href="https://x.com/{{ site.twitter_username }}">X (Twitter)</a>
+    <a href="https://x.com/{{ site.twitter_username }}" rel="me">
+      <i class="fab fa-x-twitter" aria-hidden="true" title="X"></i>
+      <span class="sr-only">X</span>
+    </a>
   {% endif %}
-    <p>&copy; イニワ</p>
+</div>
+    <p><a href="{{ '/' | relative_url }}">&copy; イニワ</a></p>
+
   </footer>
 </body>
 </html>
