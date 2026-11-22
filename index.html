@@ -3,31 +3,78 @@ layout: null
 title: ホーム
 ---
 <!DOCTYPE html>
+
 <html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ page.title }} | {{ site.title }}</title>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user=scalable=no">
+        <title>iniwa.jp</title>
+        <link rel="apple-touch-icon" href="{{ '/assets/images/apple-touch-icon.png' | relative_url }}">
+        <link rel="icon" type="image/png" href="{{ '/assets/images/android-touch-icon.png' | relative_url }}">
+        <link rel="icon" href="{{ '/assets/images/favicon.png' type="image/png" | relative_url }}">
+        <link rel="icon" href="{{ '/assets/images/favicon.svg' type="image/svg+xml" | relative_url }}">
+        <link href="https://fonts.googleapis.com/css?family=Reem+Kufi|Roboto:300" rel="stylesheet">
+        <link href="https://use.fontawesome.com/releases/v6.4.2/css/all.css" rel="stylesheet">
+        <link rel="stylesheet" href="{{ '/assets/css/reset.css' | relative_url }}">
+        <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
+        <link rel="stylesheet" href="{{ '/assets/css/themes/cannary-yellow.css' | relative_url }}">
+    </head>
+
+    <body>
+
+        <main>
+          <div class="intro">iniwa.jp</div>
+          <div class="tagline">web制作&ensp;|&ensp;アプリ開発</div>
+            <div class="icons-social">
+              <a href="{{ '/blog/' | relative_url }}">
+                <i class="fas fa-rss" aria-hidden="true" title="Blog"></i>
+                <span class="sr-only">Blog</span>
+              </a>
+              <a href="https://x.com/iniwajp" rel="me">
+                <i class="fab fa-x-twitter" aria-hidden="true" title="X"></i>
+                <span class="sr-only">X</span>
+              </a>
+              <a href="https://github.com/iniwajp" rel="me">
+                <i class="fab fa-github" aria-hidden="true" title="Github"></i>
+                <span class="sr-only">Github</span>
+              </a>
+              <a href="https://instagram.com/iniwa.jp" rel="me">
+                <i class="fab fa-instagram" aria-hidden="true" title="Instagram"></i>
+                <span class="sr-only">Instagram</span>
+              </a>
+<!--              <a href="https://youtube.com/@iniwa_jp" rel="me">
+                <i class="fab fa-youtube" aria-hidden="true" title="YouTube"></i>
+                <span class="sr-only">YouTube</span>
+              </a>
+              <a href="https://line.me/S/shop/sticker/author/93649/new?lang=ja&utm_source=gnsh_staut" rel="me">
+                <i class="fab fa-line" aria-hidden="true" title="LINE"></i>
+                <span class="sr-only">LINE</span>
+              </a> -->
+            </div>
+        </main>
+
+    </body>
+</html>
   <link rel="stylesheet" href="{{ '/assets/css/top.css' | relative_url }}">
 </head>
 <body>
-  <h1>完全オリジナルのトップページ</h1>
-  <p><a href="{{ '/blog/' | relative_url }}">ブログへ移動</a></p>
+  <p><a href="{{ '/blog/' | relative_url }}">Blog</a></p>
 
-  <!-- 最新記事のループ（Liquid記法）はそのまま使えます -->
+  <!-- 最新記事のループ（Liquid記法）はそのまま使えます
   <ul>
     {% for post in site.posts limit:3 %}
       <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
     {% endfor %}
-  </ul>
+  </ul> -->
   <footer>
-  {% if site.github_username %}
+<!--  {% if site.github_username %}
     <a href="https://github.com/{{ site.github_username }}">GitHub</a>
   {% endif %}
 
   {% if site.twitter_username %}
     <a href="https://x.com/{{ site.twitter_username }}">X (Twitter)</a>
-  {% endif %}
+  {% endif %} -->
     <p>&copy; イニワ</p>
   </footer>
 </body>

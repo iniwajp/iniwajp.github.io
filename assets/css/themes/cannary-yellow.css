@@ -1,0 +1,25 @@
+:root {
+	--back-color: rgb(255, 239, 108);
+	--text-color: rgb(75, 86, 88);
+}
+@media (prefers-color-scheme: dark) {
+	:root {
+	--back-color: #4B5658;
+	--text-color: #ffef6c;
+	}
+}
+
+
+
+
+main {
+	background: var(--back-color);
+	color: var(--text-color);
+}
+
+.icons-social a {
+	color: var(--text-color);
+}
+.icons-social a svg path{
+	fill: var(--text-color);
+}
